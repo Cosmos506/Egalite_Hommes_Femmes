@@ -1,4 +1,4 @@
-/* Style global */
+/* 🌍 Style Global */
 * {
     margin: 0;
     padding: 0;
@@ -6,190 +6,214 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    background-color: #ff6878;
-    color: #333;
-    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1e1e2e;
+    color: #fff;
+    line-height: 1.8;
 }
 
-/* En-tête */
+/* 🟢 Conteneur */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 🔵 Navigation */
+nav {
+    background-color: #162447;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1.2rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: #e43f5a;
+    font-size: 1.8rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* 🔴 En-tête */
 header {
-    background-color: #004aad;
-    color: white;
+    background: linear-gradient(135deg, #162447, #1f4068);
+    padding: 7rem 0;
+    text-align: center;
+}
+
+/* 🟠 Sections */
+section {
+    padding: 6rem 0;
+    text-align: center;
+}
+
+/* 🟣 Statistiques */
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.stat-item {
+    background: #1f4068;
+    flex: 1;
+    padding: 2rem;
+    border-radius: 10px;
+    min-width: 250px;
+    transition: 0.3s;
+}
+
+.stat-item i {
+    font-size: 2.5rem;
+    color: #e43f5a;
+    margin-bottom: 1rem;
+}
+
+/* 🔵 Défis */
+.challenges {
+    background-color: #3b5998; /* Un bleu plus doux */
+    color: #fff;
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.challenges-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.challenge-item {
+    background: #6c8ebf; /* Un bleu pastel moins agressif */
+    flex: 1;
+    padding: 2.5rem;
+    border-radius: 10px;
+    min-width: 300px;
+    transition: 0.3s;
+}
+
+.challenge-item:hover {
+    transform: scale(1.05);
+    background: #5a77a1; /* Une teinte légèrement plus sombre au survol */
+}
+
+.challenge-item h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.challenge-item p {
+    font-size: 1.2rem;
+}
+
+
+/* 🟢 Histoire */
+.history {
+    background: #1f4068;
+    color: #fff;
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.history-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.history-item {
+    background: #e43f5a;
+    padding: 2rem;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 250px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.history-item:hover {
+    transform: scale(1.05);
+}
+
+/* 🟣 Citations */
+.quotes {
+    background: linear-gradient(135deg, #162447, #1f4068);
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.quotes blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #fff;
+    margin: 1.5rem auto;
+    max-width: 600px;
+}
+
+
+/* ⚫ Footer */
+footer {
+    background-color: #162447;
     padding: 3rem 0;
     text-align: center;
-    position: relative;
-}
-
-header h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    animation: fadeIn 2s ease-in-out;
-}
-
-header p {
-    font-size: 1.5rem;
-    margin-top: 0.5rem;
-    opacity: 0;
-    animation: fadeIn 2s ease-in-out 1s forwards;
-}
-
-/* Sections */
-section {
-    padding: 4rem 0;
-    text-align: center;
-    background-color: #f4f4f4;
-    animation: fadeIn 2s ease-in-out;
-}
-
-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: #004aad;
-    letter-spacing: 1px;
-}
-
-section p {
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Liste */
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 2rem;
-}
-
-ul li {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    line-height: 1.8;
-    animation: slideIn 1s ease-out;
-}
-
-/* Call to action */
-.call-to-action {
-    background-color: #004aad;
-    color: white;
-    padding: 3rem;
-    margin-top: 3rem;
-    text-align: center;
-    animation: fadeIn 2s ease-in-out;
-}
-
-.call-to-action h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.call-to-action p {
-    font-size: 1.25rem;
-    margin-bottom: 1.5rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Footer */
-footer {
-    background-color: #004aad;
-    color: white;
-    padding: 2rem 0;
-    text-align: center;
-    position: relative;
-    animation: fadeIn 2s ease-in-out;
-}
-
-footer p {
     font-size: 1rem;
 }
 
-/* Conteneur central */
-.container {
-    width: 90%;
-    margin: 0 auto;
-    max-width: 1200px;
-}
 
-/* Animations */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
 
-@keyframes slideIn {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
 
-/* Responsive Design */
+/* 📱 Responsive */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2.5rem;
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #162447;
+        position: absolute;
+        top: 60px;
+        width: 100%;
     }
-
-    header p {
-        font-size: 1.2rem;
+    
+    .nav-links.active {
+        display: flex;
     }
-
-    section h2 {
-        font-size: 2rem;
+    
+    .menu-toggle {
+        display: block;
     }
-
-    section p {
-        font-size: 1.1rem;
-    }
-
-    .call-to-action h2 {
-        font-size: 2rem;
-    }
-
-    .call-to-action p {
-        font-size: 1.1rem;
-    }
-
-    footer p {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    header p {
-        font-size: 1.1rem;
-    }
-
-    section h2 {
-        font-size: 1.8rem;
-    }
-
-    section p {
-        font-size: 1rem;
-    }
-
-    .call-to-action h2 {
-        font-size: 1.8rem;
-    }
-
-    .call-to-action p {
-        font-size: 1rem;
+    
+    .stats-grid, .challenges-grid {
+        flex-direction: column;
     }
 }
