@@ -163,7 +163,7 @@ section {
     transition: transform 0.3s ease-in-out;
 }
 
-.history-item:hover {
+.history-item:hover, .stat-item:hover {
     transform: scale(1.05);
 }
 
