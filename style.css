@@ -215,6 +215,7 @@ footer {
     
     .menu-toggle {
         display: block;
+        z-index: 999;
     }
     
     .stats-grid, .challenges-grid {
